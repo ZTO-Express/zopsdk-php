@@ -1,16 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: choco
- * Date: 6/13/18
- * Time: 5:54 PM
- */
 
 namespace zop;
 
 class ZopHttpUtil
 {
-    public static function post($url, $headers, $querystring, $timeout)
+    public function post($url, $headers, $querystring, $timeout)
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);//设置链接
