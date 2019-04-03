@@ -8,8 +8,9 @@ class ZopRequest
     private $url;
     private $params = Array();
 
-    public function addParam($k,$v){
-        $this->params += [$k=>$v];
+    public function addParam($k, $v)
+    {
+        $this->params += [$k => $v];
     }
 
     /**
@@ -20,6 +21,10 @@ class ZopRequest
         $this->url = $url;
     }
 
+    public function setData($data)
+    {
+        $this->params = json_decode($data);
+    }
 
 
     /**
@@ -37,7 +42,6 @@ class ZopRequest
     {
         return $this->params;
     }
-
 
 
 }

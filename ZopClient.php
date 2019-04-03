@@ -21,8 +21,8 @@ class ZopClient
 
     public function execute($zopRequest)
     {
-        $url = $zopRequest->getUrl();
-        $params = $zopRequest->getParams();
+        $url = $zopRequest-> getUrl();
+        $params = $zopRequest-> getParams();
         $fixedParams = Array();
         foreach ($params as $k => $v) {
             if (gettype($v) != "string") {
